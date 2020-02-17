@@ -38,8 +38,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group|references|null: index: true, foreign_key: true, null: false|
-|user|references|null: index: true, foreign_key: true, null: false|
+|group|references|index: true, foreign_key: true, null: false|
+|user|references|index: true, foreign_key: true, null: false|
 
 ### Association
 - belongs_to :group
