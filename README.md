@@ -22,11 +22,11 @@
 - has_many :group_users
 - has_many :messages
 
-## message table
+## messages table
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|syring||
+|body|text||
+|image|string||
 |group|references|foreign_key: true|
 |user|references|foreign_key: true|
 
