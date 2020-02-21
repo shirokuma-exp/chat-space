@@ -1,28 +1,20 @@
 .side-bar
-  .side-header
-    .side-box
+  .side-bar__user-name
+    .top-items
       %h3.header__name 
         = current_user.name
       %ul.header__lists
         %li.new-group
-          = link_to do
-            = icon('fas', 'pen-square', class: "icon")
+          = link_to new_group_path do
+            = icon('fas', 'pen-square', class: "header-items__icons--pen")
         %li.edit-user
           = link_to edit_user_path(current_user) do
-            = icon('fas', 'cog', class: "icon")
-  .groups
-    .group
-      .group__name
-        %p techcamp
-      .group__message
-        %p まだメッセージがありません
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
+            = icon('fas', 'cog', class: "header-items__icons--cog")
+  .side-bar__groups-list
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#" do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。

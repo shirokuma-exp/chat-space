@@ -1,12 +1,12 @@
 .side-bar{
   width: 300px;
   background-color: #253141;
-  .side-header{
+  .side-bar__user-name{
     background-color: #253141;
     height:100px;
     display: flex;
     align-items: center;
-    .side-box{
+    .top-items{
       height: 20px;
       width: 260px;
       margin: 0 20px;
@@ -28,7 +28,7 @@
     }
   }
 
-  .groups{
+  .side-bar__groups-list{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     .group{
