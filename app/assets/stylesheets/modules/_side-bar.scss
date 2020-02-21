@@ -13,10 +13,10 @@
       display: flex;
       justify-content: space-between;
       font-weight: bold;
-      .user-name{
+      .header__name{
         color: #ffffff;
       }
-      .menu{
+      .header__lists{
         display: flex;
         justify-content: flex-end;
         list-style: none;
@@ -31,7 +31,7 @@
   .groups{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
-    .group-content{
+    .group{
       margin: 0 auto;
       width:260px;
       background-color: #2f3e51;

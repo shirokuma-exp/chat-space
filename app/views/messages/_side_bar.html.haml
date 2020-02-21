@@ -1,17 +1,28 @@
 .side-bar
   .side-header
     .side-box
-      %p.user-name masa
-      %ul.menu
+      %h3.header__name 
+        = current_user.name
+      %ul.header__lists
         %li.new-group
-          = link_to "#" do
-            = icon('far', 'fa-edit', class: "fa-edit")
+          = link_to do
+            = icon('fas', 'pen-square', class: "icon")
         %li.edit-user
-          = link_to "#" do
-            = icon('fas', 'fa-cog', class: "fa-cog")
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: "icon")
   .groups
-    .group-content
-      .group-content__name
+    .group
+      .group__name
         %p techcamp
-      .group-content__message
+      .group__message
         %p まだメッセージがありません
+    .group
+      .group__name
+        グループ名
+      .group__message
+        新着メッセージ
+    .group
+      .group__name
+        グループ名
+      .group__message
+        新着メッセージ
