@@ -1,0 +1,29 @@
+.main-chat
+  .main-header
+    .header-leftbox
+      %h2.current-group test
+      %ul.member-list
+        Member:
+        %li.member-first masa
+    = link_to "#" ,class: "edit" do
+      Edit
+  .messages
+    .FirstUser
+      .FirstUser__post
+        %p.FirstUser__name masa
+        %p.FirstUser__time 2019/11/20(wed) 17:43:01
+      %p.FirstUser__message おはよう！
+    .SecondUser
+      .SecondUser__post
+        %p.SecondUser__name masa
+        %p.SecondUser__time 2019/11/20(wed) 17:43:34
+      %p.SecondUser__message 今日は夜から雨
+  .form
+    %form.new-message
+      .input-box
+        %input.input-text{ placeholder: "type a message", type: "text"}
+        %label.input-box__image
+          = icon('fa', 'fa-image', class: 'fa-image')
+          %input.input-default{ type: "file"}
+          .boxFileSelect
+      %input.submit-btn{ name: "commit", type: "submit", value: "Send"}
